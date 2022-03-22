@@ -5,12 +5,12 @@
       {
         "name": "I initialize chrome driver",
         "aggregatedDurations": {
-          "median": 3.9762952,
-          "average": 3.976295200
+          "median": 3.228210501,
+          "average": 3.228210501
         },
         "durations": [
           {
-            "duration": 3.9762952,
+            "duration": 3.228210501,
             "location": "file:src/test/resources/features/insiderSite.feature:4"
           }
         ]
@@ -23,12 +23,12 @@
       {
         "name": "I go to \"https://useinsider.com/\" url",
         "aggregatedDurations": {
-          "median": 4.5034252,
-          "average": 4.503425200
+          "median": 4.1413647,
+          "average": 4.141364700
         },
         "durations": [
           {
-            "duration": 4.5034252,
+            "duration": 4.1413647,
             "location": "file:src/test/resources/features/insiderSite.feature:5"
           }
         ]
@@ -41,12 +41,12 @@
       {
         "name": "I see home page",
         "aggregatedDurations": {
-          "median": 0.003017,
-          "average": 0.003017000
+          "median": 0.0050467,
+          "average": 0.005046700
         },
         "durations": [
           {
-            "duration": 0.003017,
+            "duration": 0.0050467,
             "location": "file:src/test/resources/features/insiderSite.feature:6"
           }
         ]
@@ -54,12 +54,12 @@
       {
         "name": "I see career page",
         "aggregatedDurations": {
-          "median": 0.0034127,
-          "average": 0.003412700
+          "median": 0.0013465,
+          "average": 0.001346500
         },
         "durations": [
           {
-            "duration": 0.0034127,
+            "duration": 0.0013465,
             "location": "file:src/test/resources/features/insiderSite.feature:18"
           }
         ]
@@ -72,16 +72,16 @@
       {
         "name": "I wait for 5 seconds",
         "aggregatedDurations": {
-          "median": 5.004487200,
-          "average": 5.004487200
+          "median": 5.014037700,
+          "average": 5.014037700
         },
         "durations": [
           {
-            "duration": 5.0037413,
+            "duration": 5.0190116,
             "location": "file:src/test/resources/features/insiderSite.feature:7"
           },
           {
-            "duration": 5.0052331,
+            "duration": 5.0090638,
             "location": "file:src/test/resources/features/insiderSite.feature:16"
           }
         ]
@@ -89,12 +89,12 @@
       {
         "name": "I wait for 2 seconds",
         "aggregatedDurations": {
-          "median": 2.0085805,
-          "average": 2.008580500
+          "median": 2.0020224,
+          "average": 2.002022400
         },
         "durations": [
           {
-            "duration": 2.0085805,
+            "duration": 2.0020224,
             "location": "file:src/test/resources/features/insiderSite.feature:19"
           }
         ]
@@ -107,12 +107,12 @@
       {
         "name": "I check page  home",
         "aggregatedDurations": {
-          "median": 0.0097645,
-          "average": 0.009764500
+          "median": 0.016131699,
+          "average": 0.016131699
         },
         "durations": [
           {
-            "duration": 0.0097645,
+            "duration": 0.016131699,
             "location": "file:src/test/resources/features/insiderSite.feature:12"
           }
         ]
@@ -120,12 +120,12 @@
       {
         "name": "I check page  career",
         "aggregatedDurations": {
-          "median": 0.0302916,
-          "average": 0.030291600
+          "median": 0.030523499,
+          "average": 0.030523499
         },
         "durations": [
           {
-            "duration": 0.0302916,
+            "duration": 0.030523499,
             "location": "file:src/test/resources/features/insiderSite.feature:21"
           }
         ]
@@ -138,12 +138,12 @@
       {
         "name": "I click element: homepage allow cookies index: 1",
         "aggregatedDurations": {
-          "median": 0.126688,
-          "average": 0.126688000
+          "median": 0.1268904,
+          "average": 0.126890400
         },
         "durations": [
           {
-            "duration": 0.126688,
+            "duration": 0.1268904,
             "location": "file:src/test/resources/features/insiderSite.feature:13"
           }
         ]
@@ -151,12 +151,12 @@
       {
         "name": "I click element: homepage more index: 1",
         "aggregatedDurations": {
-          "median": 0.115233,
-          "average": 0.115233000
+          "median": 0.1157602,
+          "average": 0.115760200
         },
         "durations": [
           {
-            "duration": 0.115233,
+            "duration": 0.1157602,
             "location": "file:src/test/resources/features/insiderSite.feature:15"
           }
         ]
@@ -164,12 +164,12 @@
       {
         "name": "I click element: homepage career index: 1",
         "aggregatedDurations": {
-          "median": 3.4398964,
-          "average": 3.439896400
+          "median": 3.0758998,
+          "average": 3.075899800
         },
         "durations": [
           {
-            "duration": 3.4398964,
+            "duration": 3.0758998,
             "location": "file:src/test/resources/features/insiderSite.feature:17"
           }
         ]

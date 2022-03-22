@@ -21,7 +21,7 @@ Feature: E-commerce
     When I check page  career
 
 
-   # When I check careerPage seeAllTeamsButton in page index: 1
+   When I check careerPage seeAllTeamsButton in page index: 1
     #When I check careerPage locationArea in page index: 1
    #When I check careerPage lifeAtInsiderArea in page index: 1
     #When I wait for 3 seconds

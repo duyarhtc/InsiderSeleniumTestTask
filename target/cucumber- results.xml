@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="24.319101">
-<testcase classname="E-commerce" name="Start Full Test" time="24.319101">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="22.831986">
+<testcase classname="E-commerce" name="Start Full Test" time="22.831986">
 <system-out><![CDATA[Given I initialize chrome driver............................................passed
 When I go to "https://useinsider.com/" url..................................passed
 Then I see home page........................................................passed
