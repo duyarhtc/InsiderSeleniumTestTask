@@ -1,0 +1,179 @@
+[
+  {
+    "source": "^I initialize (chrome|firefox) driver$",
+    "steps": [
+      {
+        "name": "I initialize chrome driver",
+        "aggregatedDurations": {
+          "median": 3.9762952,
+          "average": 3.976295200
+        },
+        "durations": [
+          {
+            "duration": 3.9762952,
+            "location": "file:src/test/resources/features/insiderSite.feature:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I go to \"([^\"]*)\" url$",
+    "steps": [
+      {
+        "name": "I go to \"https://useinsider.com/\" url",
+        "aggregatedDurations": {
+          "median": 4.5034252,
+          "average": 4.503425200
+        },
+        "durations": [
+          {
+            "duration": 4.5034252,
+            "location": "file:src/test/resources/features/insiderSite.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I see (.*) page$",
+    "steps": [
+      {
+        "name": "I see home page",
+        "aggregatedDurations": {
+          "median": 0.003017,
+          "average": 0.003017000
+        },
+        "durations": [
+          {
+            "duration": 0.003017,
+            "location": "file:src/test/resources/features/insiderSite.feature:6"
+          }
+        ]
+      },
+      {
+        "name": "I see career page",
+        "aggregatedDurations": {
+          "median": 0.0034127,
+          "average": 0.003412700
+        },
+        "durations": [
+          {
+            "duration": 0.0034127,
+            "location": "file:src/test/resources/features/insiderSite.feature:18"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:I )?wait for (\\d+) seconds?$",
+    "steps": [
+      {
+        "name": "I wait for 5 seconds",
+        "aggregatedDurations": {
+          "median": 5.004487200,
+          "average": 5.004487200
+        },
+        "durations": [
+          {
+            "duration": 5.0037413,
+            "location": "file:src/test/resources/features/insiderSite.feature:7"
+          },
+          {
+            "duration": 5.0052331,
+            "location": "file:src/test/resources/features/insiderSite.feature:16"
+          }
+        ]
+      },
+      {
+        "name": "I wait for 2 seconds",
+        "aggregatedDurations": {
+          "median": 2.0085805,
+          "average": 2.008580500
+        },
+        "durations": [
+          {
+            "duration": 2.0085805,
+            "location": "file:src/test/resources/features/insiderSite.feature:19"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I check page  (.*)$",
+    "steps": [
+      {
+        "name": "I check page  home",
+        "aggregatedDurations": {
+          "median": 0.0097645,
+          "average": 0.009764500
+        },
+        "durations": [
+          {
+            "duration": 0.0097645,
+            "location": "file:src/test/resources/features/insiderSite.feature:12"
+          }
+        ]
+      },
+      {
+        "name": "I check page  career",
+        "aggregatedDurations": {
+          "median": 0.0302916,
+          "average": 0.030291600
+        },
+        "durations": [
+          {
+            "duration": 0.0302916,
+            "location": "file:src/test/resources/features/insiderSite.feature:21"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:I )?click element: (\\w+(?: \\w+)*) index: (\\d+)$",
+    "steps": [
+      {
+        "name": "I click element: homepage allow cookies index: 1",
+        "aggregatedDurations": {
+          "median": 0.126688,
+          "average": 0.126688000
+        },
+        "durations": [
+          {
+            "duration": 0.126688,
+            "location": "file:src/test/resources/features/insiderSite.feature:13"
+          }
+        ]
+      },
+      {
+        "name": "I click element: homepage more index: 1",
+        "aggregatedDurations": {
+          "median": 0.115233,
+          "average": 0.115233000
+        },
+        "durations": [
+          {
+            "duration": 0.115233,
+            "location": "file:src/test/resources/features/insiderSite.feature:15"
+          }
+        ]
+      },
+      {
+        "name": "I click element: homepage career index: 1",
+        "aggregatedDurations": {
+          "median": 3.4398964,
+          "average": 3.439896400
+        },
+        "durations": [
+          {
+            "duration": 3.4398964,
+            "location": "file:src/test/resources/features/insiderSite.feature:17"
+          }
+        ]
+      }
+    ]
+  }
+]

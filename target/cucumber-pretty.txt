@@ -1,0 +1,18 @@
+Feature: E-commerce
+
+  Background:                                  [90m# src/test/resources/features/insiderSite.feature:3[0m
+    [32mGiven [0m[32mI initialize [0m[32m[1mchrome[0m[32m driver[0m           [90m# MySteps.initializeChromeDriver(String)[0m
+    [32mWhen [0m[32mI go to "[0m[32m[1mhttps://useinsider.com/[0m[32m" url[0m [90m# MySteps.gotoURL(String)[0m
+    [32mThen [0m[32mI see [0m[32m[1mhome[0m[32m page[0m                       [90m# MySteps.seePage(String)[0m
+    [32mAnd [0m[32mI wait for [0m[32m[1m5[0m[32m seconds[0m                   [90m# MySteps.waitForNSeconds(int)[0m
+
+  @HTC
+  Scenario: Start Full Test                               [90m# src/test/resources/features/insiderSite.feature:10[0m
+    [32mWhen [0m[32mI check page  [0m[32m[1mhome[0m                               [90m# MySteps.CheckPage(String)[0m
+    [32mWhen [0m[32mI click element: [0m[32m[1mhomepage allow cookies[0m[32m index: [0m[32m[1m1[0m [90m# MySteps.clickElement(String,int)[0m
+    [32mWhen [0m[32mI click element: [0m[32m[1mhomepage more[0m[32m index: [0m[32m[1m1[0m          [90m# MySteps.clickElement(String,int)[0m
+    [32mAnd [0m[32mI wait for [0m[32m[1m5[0m[32m seconds[0m                              [90m# MySteps.waitForNSeconds(int)[0m
+    [32mWhen [0m[32mI click element: [0m[32m[1mhomepage career[0m[32m index: [0m[32m[1m1[0m        [90m# MySteps.clickElement(String,int)[0m
+    [32mThen [0m[32mI see [0m[32m[1mcareer[0m[32m page[0m                                [90m# MySteps.seePage(String)[0m
+    [32mAnd [0m[32mI wait for [0m[32m[1m2[0m[32m seconds[0m                              [90m# MySteps.waitForNSeconds(int)[0m
+    [32mWhen [0m[32mI check page  [0m[32m[1mcareer[0m                             [90m# MySteps.CheckPage(String)[0m
