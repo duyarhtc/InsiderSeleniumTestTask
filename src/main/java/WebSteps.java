@@ -4,10 +4,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.*;
 
 import java.nio.file.FileSystems;
 import java.util.ArrayList;
+import java.util.List;
 
 public class WebSteps implements MainSteps {
     public WebDriver driver;
@@ -33,6 +37,13 @@ public class WebSteps implements MainSteps {
                 break;
             case "career":
                 page = new CareerPage();
+                break;
+            case "QA":
+                page = new QApage();
+                break;
+
+            case "QAopenPosition":
+                page = new QAopenPositionsPage();
                 break;
 
             default:
@@ -81,6 +92,105 @@ public class WebSteps implements MainSteps {
 
     }
 
+    public void CheckElementPage(String element, int index){
+        WebElement object;
+        object=findElement(element,index);
+        if(object.isDisplayed()){
+            System.out.println("This element is exist");
+        }
+        else System.out.println("This element is not exist!");
+    }
+
+    public void ScroollPageForPositions(String element, int index, int begin, int end)throws InterruptedException {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("window.scrollBy("+begin+","+end+")");
+        jse.executeScript("arguments[0].click();", findElement(element,index));
+        Thread.sleep(500);
+
+
+    }
+    public void CheckClikableElement(String element, int  index){
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(element)));
+    }
+
+    public void ScrollPage(int value)throws InterruptedException{
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("window.scrollBy(0,"+value+")");
+        Thread.sleep(500);
+
+    }
+
+    public void SelectInFilterArea(String element, String value) throws InterruptedException{
+        WebElement objectDropdown=findElement(element,0);
+        List<WebElement> options = objectDropdown.findElements(By.tagName("li"));
+        for (WebElement option : options)
+        {
+            if (option.getText().equals(value))
+            {
+
+                    option.click(); // click the desired option
+                    System.out.println("Select option:" + value);
+                    break;
+
+            }
+        }
+
+
+    }
+
+    public void CheckPositionResult(String element, int index){
+        WebElement object=findElement(element,index);
+
+        String result=object.getText();
+        if(!result.equals("0 result.")){
+            System.out.println("There is open position/s for this filter");
+        }
+        else{
+            System.out.println("There is no open position for this filter.");
+        }
+
+    }
+
+    public void CheckPositionsElementForDepartmantAndLoacation(String element, String department, String location, int index) throws InterruptedException{
+
+        List<WebElement> joblist = driver.findElements(By.className("position-list-item-wrapper"));
+
+           for(WebElement job:joblist){
+               System.out.println(job.getText());
+               if(job.getText().contains(department)&&job.getText().contains(location)){
+                   System.out.println("all areas are suitable for filtering");
+
+                   Actions actions = new Actions(driver);
+                   actions.moveToElement(job).build().perform();
+                   Thread.sleep(2000);
+
+                   WebElement elementApply=job.findElement(By.xpath("//*[contains(text(), 'Apply Now')]"));
+                   elementApply.click();
+                   Thread.sleep(200);
+                   driver.navigate().back();
+                   Thread.sleep(200);
+
+               }
+               else{
+                   System.out.println("fields are not suitable for filter"+job.getText());
+               }
+
+           }
+
+
+    }
+    public void mouseHover(String element) throws InterruptedException{
+        Actions actions = new Actions(driver);
+        WebElement elem = null;
+        elem = waitElement(element, 100);
+        actions.moveToElement(elem).build().perform();
+        Thread.sleep(2000);
+    }
+
     public WebElement findElement(String element, int index) {
         try {
             WebElement object;
@@ -119,6 +229,7 @@ public class WebSteps implements MainSteps {
         WebElement object = waitElement(element, 30);
 
         if (object != null) {
+            Thread.sleep(500);
 
             findElement(element, index).click();
 
@@ -162,12 +273,7 @@ public class WebSteps implements MainSteps {
         }
     }
 
-    public void switchTab(){
-        ArrayList<String> productTab = new ArrayList<String> (this.driver.getWindowHandles());
-        driver.switchTo().window(productTab.get(1));
-        System.out.println("new tab open for product");
 
-    }
 
     public void clickKeyboardWithElement(String key, String element) {
         WebElement object = findElement(element, 0);

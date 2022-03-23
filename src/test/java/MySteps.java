@@ -1,6 +1,7 @@
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -19,9 +20,10 @@ public class MySteps extends BasePage {
             // embed it in the report.
             scenario.embed(screenshot, "image/png");
             String link = "C:\\Users\\keski\\IdeaProjects\\SeleniumProjectTask2\\target\\cucumber-html-report\\index.html";
+            System.out.println("Error saved to log");
             System.out.println("<a href=\"" + link + "\">" + link + "</a>");
         }
-       // websteps.driver.quit();
+        websteps.driver.quit();
     }
 
     @Before
@@ -54,15 +56,9 @@ public class MySteps extends BasePage {
     }
 
     @When("^(?:I )?click element: (\\w+(?: \\w+)*) index: (\\d+)$")
-    public void clickElement(String element, int index) {
-        WebElement object = websteps.findElement(element, index - 1);
+    public void clickElement(String element, int index) throws InterruptedException {
+        websteps.clickElement(element,index-1);
 
-        if (object != null) {
-            object.click();
-            System.out.println("Clicked on object-->" + element);
-        } else {
-            System.out.println("Could not click on object-->" + element);
-        }
     }
 
     @When("^I enter \"([^\"]*)\" text to (.*) text area$")
@@ -103,39 +99,49 @@ public class MySteps extends BasePage {
 
     @When("^(?:I )?focus (.*) element$")
     public void mouseHover(String element) throws InterruptedException {
-        Actions actions = new Actions(websteps.driver);
-        WebElement elem = null;
-        elem = websteps.waitElement(element, 5);
-        actions.moveToElement(elem).perform();
-        Thread.sleep(2000);
+        websteps.mouseHover(element);
 
     }
-
-    @When("^(?:I )?clean (.*) then I enter \"([^\"]*)\" text$")
-    public void cleanField(String element, String text) throws InterruptedException {
-        By elem = websteps.page.pageElements.get(element);
-        websteps.driver.findElement(elem).clear();
-        waitForNSeconds(2);
-        enterText(text, element);
-    }
-    //////////////////////////////////////////////////////////////////////////////////
-
-    @When("^(?:I )? switch to tab$")
-    public void SwithTab() {
-        websteps.switchTab();
-
-
-    }
-
-    @When("^(?:I )? check (\\w+(?: \\w+)*) element1 and (\\w+(?: \\w+)*) element2 in Cart$")
-    public void CheckMyCart(String element1, String element2) throws InterruptedException {
-        System.out.println(websteps.waitElement(element1, 2).getText() + websteps.waitElement(element2, 2).getText());
-    }
-
 
 
     @When("^I check page  (.*)$")
     public void CheckPage(String page) {
         websteps.CheckPage(page);
+    }
+
+    @When("^I check (\\w+(?: \\w+)*) in page index: (\\d+)$")
+    public void CheckElementPage(String element, int index) {
+        websteps.CheckElementPage(element,index-1);
+    }
+
+    @When("I scroollPage for  element: (\\w+(?: \\w+)*) , index: (\\d+) and positions: (\\d+) - (\\d+)$")
+    public void ScroollPageForPositions(String element, int index, int begin, int end)throws InterruptedException {
+        websteps.ScroollPageForPositions(element,index-1,begin,end);
+    }
+
+    @When("^I check clikable element : (\\w+(?: \\w+)*) index: (\\d+)$")
+    public void CheckClikableElement(String element, int  index) {
+        websteps.CheckClikableElement(element,index-1);
+    }
+
+
+    @When("^I scrollPage for (\\d+)$")
+    public void ScrollPage(int value)throws InterruptedException {
+        websteps.ScrollPage(value);
+    }
+
+    @Then("^I select in filter area :(\\w+(?: \\w+)*) and set  value: (.*)$")
+    public void SelectInFilterArea(String element, String value) throws InterruptedException{
+        websteps.SelectInFilterArea(element,value);
+    }
+
+    @Then("^I check position result element : (\\w+(?: \\w+)*) and index: (.*)$")
+    public void CheckPositionResult(String element, int index) {
+        websteps.CheckPositionResult(element,index-1);
+    }
+
+    @When("^I check positions element: (\\w+(?: \\w+)*) for departmant (.*) and loacation (.*) index : (.*)$")
+    public void CheckPositionsElementForDepartmantAndLoacation(String element, String department, String location, int index)throws InterruptedException {
+    websteps.CheckPositionsElementForDepartmantAndLoacation(element,department,location,index-1);
     }
 }

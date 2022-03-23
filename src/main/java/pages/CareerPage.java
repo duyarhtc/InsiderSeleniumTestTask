@@ -17,7 +17,6 @@ public class CareerPage extends BasePage {
         CareerElements.put("careerPage qualityAssuranceArea", By.xpath("//*[contains(text(), 'Quality Assurance')]"));
 
 
-        CareerElements.put("submit login button", By.xpath("//*[@id=\"login-register\"]/div[3]/div[1]/form/button"));
-        this.pageElements = CareerElements;
+         this.pageElements = CareerElements;
     }
 }

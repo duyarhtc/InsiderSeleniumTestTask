@@ -2,17 +2,65 @@ Feature: E-commerce
 
   Background:                                  [90m# src/test/resources/features/insiderSite.feature:3[0m
     [32mGiven [0m[32mI initialize [0m[32m[1mchrome[0m[32m driver[0m           [90m# MySteps.initializeChromeDriver(String)[0m
-    [32mWhen [0m[32mI go to "[0m[32m[1mhttps://useinsider.com/[0m[32m" url[0m [90m# MySteps.gotoURL(String)[0m
-    [32mThen [0m[32mI see [0m[32m[1mhome[0m[32m page[0m                       [90m# MySteps.seePage(String)[0m
-    [32mAnd [0m[32mI wait for [0m[32m[1m5[0m[32m seconds[0m                   [90m# MySteps.waitForNSeconds(int)[0m
+    [31mWhen [0m[31mI go to "[0m[31m[1mhttps://useinsider.com/[0m[31m" url[0m [90m# MySteps.gotoURL(String)[0m
+      [31morg.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=99.0.4844.82)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-DQ676ILB', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_312'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\keski\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57688}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7b3b413d06165ff295083d7696296dce
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at WebSteps.openUrl(WebSteps.java:58)
+	at MySteps.gotoURL(MySteps.java:49)
+	at ✽.I go to "https://useinsider.com/" url(file:src/test/resources/features/insiderSite.feature:6)
+[0m
+    [36mThen [0m[36mI see [0m[36m[1mhome[0m[36m page[0m                       [90m# MySteps.seePage(String)[0m
+    [36mAnd [0m[36mI wait for [0m[36m[1m5[0m[36m seconds[0m                   [90m# MySteps.waitForNSeconds(int)[0m
 
   @HTC
-  Scenario: Start Full Test                               [90m# src/test/resources/features/insiderSite.feature:10[0m
-    [32mWhen [0m[32mI check page  [0m[32m[1mhome[0m                               [90m# MySteps.CheckPage(String)[0m
-    [32mWhen [0m[32mI click element: [0m[32m[1mhomepage allow cookies[0m[32m index: [0m[32m[1m1[0m [90m# MySteps.clickElement(String,int)[0m
-    [32mWhen [0m[32mI click element: [0m[32m[1mhomepage more[0m[32m index: [0m[32m[1m1[0m          [90m# MySteps.clickElement(String,int)[0m
-    [32mAnd [0m[32mI wait for [0m[32m[1m5[0m[32m seconds[0m                              [90m# MySteps.waitForNSeconds(int)[0m
-    [32mWhen [0m[32mI click element: [0m[32m[1mhomepage career[0m[32m index: [0m[32m[1m1[0m        [90m# MySteps.clickElement(String,int)[0m
-    [32mThen [0m[32mI see [0m[32m[1mcareer[0m[32m page[0m                                [90m# MySteps.seePage(String)[0m
-    [32mAnd [0m[32mI wait for [0m[32m[1m2[0m[32m seconds[0m                              [90m# MySteps.waitForNSeconds(int)[0m
-    [32mWhen [0m[32mI check page  [0m[32m[1mcareer[0m                             [90m# MySteps.CheckPage(String)[0m
+  Scenario: Start Full Test                                                                                                              [90m# src/test/resources/features/insiderSite.feature:11[0m
+    [36mWhen [0m[36mI check page  [0m[36m[1mhome[0m                                                                                                              [90m# MySteps.CheckPage(String)[0m
+    [36mThen [0m[36mI click element: [0m[36m[1mhomepage allow cookies[0m[36m index: [0m[36m[1m1[0m                                                                                [90m# MySteps.clickElement(String,int)[0m
+    [36mWhen [0m[36mI click element: [0m[36m[1mhomepage more[0m[36m index: [0m[36m[1m1[0m                                                                                         [90m# MySteps.clickElement(String,int)[0m
+    [36mThen [0m[36mI wait for [0m[36m[1m5[0m[36m seconds[0m                                                                                                            [90m# MySteps.waitForNSeconds(int)[0m
+    [36mWhen [0m[36mI click element: [0m[36m[1mhomepage career[0m[36m index: [0m[36m[1m1[0m                                                                                       [90m# MySteps.clickElement(String,int)[0m
+    [36mThen [0m[36mI see [0m[36m[1mcareer[0m[36m page[0m                                                                                                               [90m# MySteps.seePage(String)[0m
+    [36mThen [0m[36mI wait for [0m[36m[1m2[0m[36m seconds[0m                                                                                                            [90m# MySteps.waitForNSeconds(int)[0m
+    [36mAnd [0m[36mI check page  [0m[36m[1mcareer[0m                                                                                                             [90m# MySteps.CheckPage(String)[0m
+    [36mWhen [0m[36mI check [0m[36m[1mcareerPage seeAllTeamsButton[0m[36m in page index: [0m[36m[1m1[0m                                                                           [90m# MySteps.CheckElementPage(String,int)[0m
+    [36mThen [0m[36mI check [0m[36m[1mcareerPage locationArea[0m[36m in page index: [0m[36m[1m1[0m                                                                                [90m# MySteps.CheckElementPage(String,int)[0m
+    [36mThen [0m[36mI check [0m[36m[1mcareerPage lifeAtInsiderArea[0m[36m in page index: [0m[36m[1m1[0m                                                                           [90m# MySteps.CheckElementPage(String,int)[0m
+    [36mAnd [0m[36mI wait for [0m[36m[1m3[0m[36m seconds[0m                                                                                                             [90m# MySteps.waitForNSeconds(int)[0m
+    [36mWhen [0m[36mI scroollPage for  element: [0m[36m[1mcareerPage seeAllTeamsButton[0m[36m , index: [0m[36m[1m1[0m[36m and positions: [0m[36m[1m0[0m[36m - [0m[36m[1m2500[0m                                     [90m# MySteps.ScroollPageForPositions(String,int,int,int)[0m
+    [36mThen [0m[36mI scroollPage for  element: [0m[36m[1mcareerPage qualityAssuranceArea[0m[36m , index: [0m[36m[1m1[0m[36m and positions: [0m[36m[1m0[0m[36m - [0m[36m[1m200[0m                                   [90m# MySteps.ScroollPageForPositions(String,int,int,int)[0m
+    [36mThen [0m[36mI see [0m[36m[1mQA[0m[36m page[0m                                                                                                                   [90m# MySteps.seePage(String)[0m
+    [36mAnd [0m[36mI wait for [0m[36m[1m3[0m[36m seconds[0m                                                                                                             [90m# MySteps.waitForNSeconds(int)[0m
+    [36mWhen [0m[36mI click element: [0m[36m[1mQAPage seeAllQAJobsButton[0m[36m index: [0m[36m[1m1[0m                                                                             [90m# MySteps.clickElement(String,int)[0m
+    [36mThen [0m[36mI see [0m[36m[1mQAopenPosition[0m[36m page[0m                                                                                                       [90m# MySteps.seePage(String)[0m
+    [36mAnd [0m[36mI wait for [0m[36m[1m3[0m[36m seconds[0m                                                                                                             [90m# MySteps.waitForNSeconds(int)[0m
+    [36mWhen [0m[36mI scrollPage for [0m[36m[1m200[0m                                                                                                            [90m# MySteps.ScrollPage(int)[0m
+    [36mThen [0m[36mI click element: [0m[36m[1mQAopenPOsitionPage LocationDropDown[0m[36m index: [0m[36m[1m1[0m                                                                   [90m# MySteps.clickElement(String,int)[0m
+    [36mAnd [0m[36mI wait for [0m[36m[1m3[0m[36m seconds[0m                                                                                                             [90m# MySteps.waitForNSeconds(int)[0m
+    [36mWhen [0m[36mI select in filter area :[0m[36m[1mQAopenPOsitionPage LocationResults[0m[36m and set  value: [0m[36m[1mIstanbul, Turkey[0m                                    [90m# MySteps.SelectInFilterArea(String,String)[0m
+    [36mThen [0m[36mI wait for [0m[36m[1m3[0m[36m seconds[0m                                                                                                            [90m# MySteps.waitForNSeconds(int)[0m
+    [36mWhen [0m[36mI click element: [0m[36m[1mQAopenPOsitionPage DepartmentDropDown[0m[36m index: [0m[36m[1m1[0m                                                                 [90m# MySteps.clickElement(String,int)[0m
+    [36mThen [0m[36mI wait for [0m[36m[1m1[0m[36m seconds[0m                                                                                                            [90m# MySteps.waitForNSeconds(int)[0m
+    [36mWhen [0m[36mI select in filter area :[0m[36m[1mQAopenPOsitionPage DepartmentResults[0m[36m and set  value: [0m[36m[1mQuality Assurance[0m                                 [90m# MySteps.SelectInFilterArea(String,String)[0m
+    [36mThen [0m[36mI wait for [0m[36m[1m1[0m[36m seconds[0m                                                                                                            [90m# MySteps.waitForNSeconds(int)[0m
+    [36mThen [0m[36mI check position result element : [0m[36m[1mQAopenPOsitionPage FilterResultArea[0m[36m and index: [0m[36m[1m1[0m                                              [90m# MySteps.CheckPositionResult(String,int)[0m
+    [36mAnd [0m[36mI wait for [0m[36m[1m5[0m[36m seconds[0m                                                                                                             [90m# MySteps.waitForNSeconds(int)[0m
+    [36mWhen [0m[36mI scrollPage for [0m[36m[1m250[0m                                                                                                            [90m# MySteps.ScrollPage(int)[0m
+    [36mThen [0m[36mI check positions element: [0m[36m[1mQAopenPOsitionPage PositionList[0m[36m for departmant [0m[36m[1mQA Assurance[0m[36m and loacation [0m[36m[1mİstanbul, Turkey[0m[36m index : [0m[36m[1m1[0m [90m# MySteps.CheckPositionsElementForDepartmantAndLoacation(String,String,String,int)[0m
